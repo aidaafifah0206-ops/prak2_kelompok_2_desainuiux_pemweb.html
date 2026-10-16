@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body style="font-family: sans-serif; background-color: #f4f4f4; padding: 20px; color: #333;">
+
+    <!-- Wrapper Utama (Card Layout) -->
+    <div style="max-width: 650px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+        <!-- Header & Navigasi -->
+        <div style="text-align: center; margin-bottom: 25px;">
+            <nav style="margin-bottom: 15px; font-size: 0.95em;">
+                <a href="#" style="color: #34495e; text-decoration: none; font-weight: bold;">Home</a> | 
+                <a href="#" style="color: #34495e; text-decoration: none; font-weight: bold;">Generate Link</a> | 
+                <a href="#" style="color: #34495e; text-decoration: none; font-weight: bold;">Transaction History</a> | 
+                <a href="#" style="color: #34495e; text-decoration: none; font-weight: bold;">Policy</a> | 
+                <a href="#" style="color: #e74c3c; text-decoration: none; font-weight: bold;">Logout</a>
+            </nav>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
+            <h1 style="color: #2c3e50; margin: 0 0 5px 0;">Form Pemesanan Barang</h1>
+            <p style="color: #7f8c8d; margin: 0; font-size: 0.95em;">Silakan lengkapi detail informasi barang di bawah ini</p>
+        </div>
+
+        <!-- Form Pemesanan -->
+        <form action="#" method="post" enctype="multipart/form-data">
+            <table border="0" cellpadding="8" cellspacing="0" style="width: 100%; font-size: 0.95em;">
+                
+                <!-- Section 1: Gambar & Info Barang -->
+                <tr>
+                    <td style="width: 160px; vertical-align: top; text-align: center; padding-right: 15px;">
+                        <div style="border: 2px dashed #bbb; width: 140px; height: 140px; text-align: center; border-radius: 8px; background-color: #fafafa; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                            <span style="color: #777; font-size: 0.9em; line-height: 140px; display: block;">[ Gambar Barang ]</span>
+                        </div>
+                        <input type="file" id="upload" name="upload" style="display: none;">
+                        <button type="button" onclick="document.getElementById('upload').click();" style="background-color: #7f8c8d; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85em;">Upload Picture</button>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <table border="0" cellpadding="6" cellspacing="0" style="width: 100%;">
+                            <tr>
+                                <td style="width: 30%; font-weight: bold; color: #555; text-align: right;"><label for="title">Title Here :</label></td>
+                                <td>
+                                    <input type="text" id="title" name="title" value="MacBook Air E800" style="width: 95%; padding: 7px; border: 1px solid #ccc; border-radius: 4px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold; color: #555; text-align: right; vertical-align: top;"><label for="description">Description :</label></td>
+                                <td>
+                                    <textarea id="description" name="description" rows="4" style="width: 95%; padding: 7px; border: 1px solid #ccc; border-radius: 4px; font-family: sans-serif;">Year : 2009&#10;&#10;Model :&#10;&#10;Condition : Mint</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Pembatas antar section -->
+                <tr>
+                    <td colspan="2"><hr style="border: 0; border-top: 1px dashed #ddd; margin: 10px 0;"></td>
+                </tr>
+
+                <!-- Section 2: Info Rekening & Bank -->
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right;"><label for="account_number">Account Number :</label></td>
+                    <td>
+                        <input type="text" id="account_number" name="account_number" value="123-456-789-0" style="width: 90%; padding: 7px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right;"><label for="bank">Bank :</label></td>
+                    <td>
+                        <select id="bank" name="bank" style="padding: 7px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; width: 45%;">
+                            <option value="HSBC" selected>HSBC</option>
+                            <option value="BCA">BCA</option>
+                            <option value="Mandiri">Mandiri</option>
+                            <option value="BNI">BNI</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right;"><label for="account_holder">Account Holder :</label></td>
+                    <td>
+                        <input type="text" id="account_holder" name="account_holder" value="Name Here" style="width: 90%; padding: 7px; border: 1px solid #ccc; border-radius: 4px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right; vertical-align: top;"><label for="transaction">Transaction :</label></td>
+                    <td>
+                        <input type="number" id="transaction" name="transaction" value="1" min="1" max="10" style="width: 60px; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+                        <div style="margin-top: 4px; font-size: 0.8em; color: #7f8c8d; font-style: italic;">
+                            * if the transaction is for 3 person, choose 3 from the drop-down list
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Pembatas antar section -->
+                <tr>
+                    <td colspan="2"><hr style="border: 0; border-top: 1px dashed #ddd; margin: 10px 0;"></td>
+                </tr>
+
+                <!-- Section 3: Opsi & Pengiriman Notifikasi -->
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right; vertical-align: top;">Notifikasi :</td>
+                    <td>
+                        <div style="background-color: #f0f8ff; padding: 12px; border-left: 4px solid #3498db; border-radius: 4px; width: 85%;">
+                            <label style="display: block; margin-bottom: 6px; cursor: pointer;">
+                                <input type="checkbox" id="send_mobile" name="send_mobile" checked style="accent-color: #27ae60;"> <strong>Send to Mobile Phone</strong>
+                            </label>
+                            <label style="display: block; cursor: pointer;">
+                                <input type="checkbox" id="send_email" name="send_email" checked style="accent-color: #27ae60;"> <strong>Send to Email</strong>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right;"><label for="mobile_number">Send to Mobile Phone :</label></td>
+                    <td>
+                        <input type="text" id="mobile_number" name="mobile_number" value="1234567890, 1234567891" style="width: 90%; padding: 7px; border: 1px solid #ccc; border-radius: 4px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #555; text-align: right;"><label for="email_address">Send to Email :</label></td>
+                    <td>
+                        <input type="text" id="email_address" name="email_address" value="mfmm2g13@soton.ac.uk, fya_06@yahoo.com" style="width: 90%; padding: 7px; border: 1px solid #ccc; border-radius: 4px;">
+                    </td>
+                </tr>
+
+                <!-- Section 4: Tombol Action -->
+                <tr>
+                    <td></td>
+                    <td style="padding-top: 20px;">
+                        <button type="submit" style="background-color: #27ae60; color: white; border: none; padding: 12px 24px; font-size: 1em; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.2s;">
+                            Generate Nobr Link
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+</body>
+	</html>
